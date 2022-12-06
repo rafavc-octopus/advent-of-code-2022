@@ -6,6 +6,11 @@ def first_part():
     
     marker = find_marker(content, size=4)
 
+def second_part():
+    with open("packets.txt") as file:
+        content = file.read()
+    
+    marker = find_marker(content, size=14)
 
 def find_marker(datastream: str, size: int) -> str:
 
@@ -29,3 +34,4 @@ def find_marker(datastream: str, size: int) -> str:
 
 if __name__ == "__main__":
     first_part()
+    second_part()
